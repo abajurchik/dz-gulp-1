@@ -8,10 +8,10 @@ gulp.task('server', ['styles'], function() {
     });
     gulp.watch('./app/**/*.html').on('change', browserSync.reload);
     gulp.watch('./app/less/**/*.less', ['styles']);
-    //gulp.watch('./app/sass/**/*.scss', ['sass']);
+    
 });
 
-gulp.task('blalala', function() {
+gulp.task('styles', function() {
     return gulp.src('./app/less/**/*.less')
     .pipe(less())
     .pipe(gulp.dest('./app/css'))
